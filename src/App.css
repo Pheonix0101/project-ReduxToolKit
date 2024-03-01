@@ -41,13 +41,25 @@
   color: #888;
 }
 
-
-body{
-  background-color: rgb(10 114 128);
+body {
+  background-color: rgb(15, 82, 90);
 }
 
-h1{
+h1 {
   color: aliceblue;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: x-large !important;
 }
+
+.input {
+  margin-bottom: 26px;
+}
+
+/* .button{
+  background-color: orangered;
+  color: aliceblue;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 5px;
+
+} */
