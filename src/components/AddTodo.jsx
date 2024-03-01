@@ -25,7 +25,8 @@ function AddTodo() {
       />
       <button
         type="submit"
-        className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+        disabled={input.length <= 2}
+        className={`text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none ${input.length <=2 ? 'opacity-50 cursor-not-allowed' :'hover:bg-indigo-600'} rounded text-lg`}
       >
         Add Todo
       </button>

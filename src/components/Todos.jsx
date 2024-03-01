@@ -1,11 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import { MdOutlineSystemSecurityUpdateGood } from "react-icons/md";
+import { GrUpdate } from "react-icons/gr";
 import { MdSave } from "react-icons/md";
 
 import "../App.css";
 import { removeTodo, updateTodo } from "../features/todo/todoSlice";
-
 
 function Todos() {
   const todos = useSelector((state) => state.todos);
@@ -39,7 +38,7 @@ function Todos() {
                 type="text"
                 value={updateInput}
                 onChange={(e) => setUpdateInput(e.target.value)}
-                className="input bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="input bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-2 leading-8 transition-colors duration-100 ease-in-out"
               />
             ) : (
               <div className="text-white">{todo.text}</div>
@@ -50,16 +49,19 @@ function Todos() {
               {editingId === todo.id ? (
                 <button
                   onClick={handleUpdateTodo}
-                  className="button bg-green-500 mr-2 border-0 py-1 px-3 hover:bg-red-700 rounded text-md"
+                  className="button text-white border-opacity-0 bg-green-500 mr-2 border-0 py-1 px-3 hover:bg-green-800 rounded text-md"
                 >
-                  <MdSave/>
+                  <MdSave />
                 </button>
               ) : (
                 <button
                   onClick={() => handleUpdateClick(todo)}
-                  className="text-white bg-violet-500 border-0 mx-3 py-2 px-4 focus:outline-none hover:bg-violet-800 rounded text-md text-center"
+                  className="button text-white bg-violet-500 border-0 mr-2 py-1 px-3 focus:outline-none hover:bg-violet-800 rounded text-md"
                 >
-                  <MdOutlineSystemSecurityUpdateGood />
+                  {/* <MdOutlineSystemSecurityUpdateGood /> */}
+                  <GrUpdate />
+     
+
                 </button>
               )}
               <button
